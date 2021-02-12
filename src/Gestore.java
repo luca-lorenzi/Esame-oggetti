@@ -11,9 +11,12 @@ public class Gestore {
 					if (line == null) {
 						break;
 					}
-					String [] data = line.split(";");
-					
+					String [] dati = line.split(";");
+					if(dati[0].compareTo("P")==0) {
+						Sfida sf=new Pacifica(dati[1], dati[2], dati[3], dati[4], dati[5]);
+					}
 					
 		}
 	}
+	public void stampapertempo()
 }
