@@ -1,7 +1,10 @@
 import prog.io.FileInputManager;
 
-public class Gestore {
-
+public class Gestore extends Lista{
+	
+public void inserisci(Sfida sf) {
+	
+}
 	public void caricadafile() {
 		
 		FileInputManager file = new FileInputManager ("ElencoSfide.txt");
@@ -18,5 +21,13 @@ public class Gestore {
 					
 		}
 	}
-	public void stampapertempo()
+	public void stampapertempo() {
+		
+	}
+	public void StampaPerPunti() {
+		
+	}
+	public void Ricerca() {
+		
+	}
 }
