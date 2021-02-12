@@ -2,6 +2,7 @@
 
 public class Lista {
 nodo primo;
+nodo primo1;
 public class nodo{
 	Sfida dato;
 	nodo pros;
@@ -69,8 +70,6 @@ public void inserisci(Sfida sf ){
                 			 anno2=Integer.parseInt(parti2[2]);
                 			 minuti2=Integer.parseInt(ore2A[1]);
                 		     ore2=Integer.parseInt(ore2A[0]);
-                		     System.out.println(sf.ora+"SF");
-                		     System.out.println(p.dato.ora);
                 		     if(ore2==ore1) {
                 		    	 elemento3=true;	
                 		    	 while(p!=null && minuti2<minuti1 && ore2==ore1 ) {
@@ -91,7 +90,7 @@ public void inserisci(Sfida sf ){
                 		     if(elemento3==true) {
                 		    	 break;
                 		     }
-                		     if(oreflag==false) {
+                		     if(oreflag==false && ore2<ore1) {
                 		    	 q=p;
                 		    	 p=p.pros;
                 		     }
@@ -168,4 +167,21 @@ public void inserisci(Sfida sf ){
 
     }     
     }
+//CREAZIONE LISTA ORDINATA PER PUNTI
+public void inserisciPerPunti(Sfida sf) {
+	nodo p1=primo1,q1=null;
+	while(p1!=null && Integer.compare(p1.dato.punti, sf.punti)<0) {
+		q1=p1;
+		p1=p1.pros;
+	}
+	nodo r1=new nodo();
+	r1.dato=sf;
+	r1.pros=p1;
+	if(q1==null) {
+		primo1=r1;
+	}
+	else
+		q1.pros=r1;
+		q1=r1;	
+}
 }
