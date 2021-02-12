@@ -1,8 +1,8 @@
 
 public class Pacifica extends Sfida{
 	int punteggio;
-	public Pacifica(String descrizione, String data, String ora, String nomi, String validità) {
-		super(descrizione, data, ora, nomi, validità);
+	public Pacifica(String codice,String descrizione, String data, String ora, String nomi, String validità) {
+		super(codice,descrizione, data, ora, nomi, validità);
 		// TODO Auto-generated constructor stub
 	}
 
