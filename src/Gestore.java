@@ -30,20 +30,18 @@ public void inserisci2(Sfida sf)  {
 						break;
 					}
 					String [] dati = line.split(",");
-					System.out.println(dati[2]);
 					if(dati[0].compareTo("P")==0) {
 						Sfida sf=new Pacifica(dati[0],dati[1], dati[2], dati[3], dati[4], dati[5], dati[6]);
-						sf.punteggio();
 						inserisci2(sf);
 					}
 					if(dati[0].compareTo("N")==0) {
-						Sfida sf=new Pacifica(dati[0],dati[1], dati[2], dati[3], dati[4], dati[5], dati[6]);
+						Sfida sf=new Normale(dati[0],dati[1], dati[2], dati[3], dati[4], dati[5], dati[6]);
 						sf.punteggio();
 						inserisci2(sf);
 						
 					}
 					if(dati[0].compareTo("C")==0) {
-						Sfida sf=new Pacifica(dati[0],dati[1], dati[2], dati[3], dati[4],dati[5],dati[6]);
+						Sfida sf=new Normale(dati[0],dati[1], dati[2], dati[3], dati[4],dati[5],dati[6]);
 						inserisci2(sf);
 					}
 					
@@ -60,7 +58,7 @@ public void inserisci2(Sfida sf)  {
 		}
 		nodo z=l.primo;
 		while (z!=null) {
-			System.out.println(z.dato.data+"   "+ z.dato.ora);
+			System.out.println(z.dato.codice +"  | "+ z.dato.descrizione+"  | "+z.dato.data+" |  "+ z.dato.ora + z.dato.nomi+" |  "+z.dato.validità+"   "+z.dato.id);
 			
 			z=z.pros;
 		}
@@ -75,7 +73,7 @@ public void inserisci2(Sfida sf)  {
 		}
 		nodo z2=l2.primo;
 		while(z2!=null) {
-			System.out.println(z2.dato.punti);
+			System.out.println(z2.dato.codice +"   "+ z2.dato.descrizione+"   "+z2.dato.data+"   "+ z2.dato.ora +"   " +z2.dato.nomi+"   "+z2.dato.validità+"   "+z2.dato.id);
 			z2=z2.pros;		
 			}
 		
